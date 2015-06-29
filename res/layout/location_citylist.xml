@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <LinearLayout
+        android:id="@+id/searchBarContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/sectionTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="55dip"
+            android:layout_marginBottom="3dip"
+            android:background="#ffffff"
+            android:gravity="center_vertical"
+            android:paddingLeft="8dip"
+            android:text="  GPS定位城市"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/infoRowContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:background="@drawable/apply_business__edit_bg"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip" >
+
+            <ImageView
+                android:id="@+id/loacation_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_search"
+                android:paddingRight="5dp" />
+
+            <TextView
+                android:id="@+id/cityName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@id/loacation_image"
+                android:paddingLeft="5dp"
+                android:text="正在获取定位城市..."
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/searchBarContainer" >
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:cacheColorHint="#00000000"
+            android:divider="@drawable/line"
+            android:fadingEdge="none"
+            android:fastScrollEnabled="false"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            android:listSelector="#00000000"
+            android:smoothScrollbar="true" />
+    </LinearLayout>
+
+</RelativeLayout>
